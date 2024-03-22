@@ -3,29 +3,25 @@
  *
  * \brief Component description for RSTC
  *
- * Copyright (c) 2016-2018 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2018 Microchip Technology Inc.
  *
  * \asf_license_start
  *
  * \page License
  *
- * Subject to your compliance with these terms, you may use Microchip
- * software and any derivatives exclusively with Microchip products.
- * It is your responsibility to comply with third party license terms applicable
- * to your use of third party software (including open source software) that
- * may accompany Microchip software.
+ * SPDX-License-Identifier: Apache-2.0
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES,
- * WHETHER EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE,
- * INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY,
- * AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT WILL MICROCHIP BE
- * LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE
- * SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS BEEN ADVISED OF THE
- * POSSIBILITY OR THE DAMAGES ARE FORESEEABLE.  TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY
- * RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
- * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may
+ * not use this file except in compliance with the License.
+ * You may obtain a copy of the Licence at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an AS IS BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  * \asf_license_stop
  *
@@ -63,20 +59,20 @@ typedef union {
 #define RSTC_RCAUSE_OFFSET          0x00         /**< \brief (RSTC_RCAUSE offset) Reset Cause */
 
 #define RSTC_RCAUSE_POR_Pos         0            /**< \brief (RSTC_RCAUSE) Power On Reset */
-#define RSTC_RCAUSE_POR             (0x1u << RSTC_RCAUSE_POR_Pos)
+#define RSTC_RCAUSE_POR             (_U_(0x1) << RSTC_RCAUSE_POR_Pos)
 #define RSTC_RCAUSE_BODCORE_Pos     1            /**< \brief (RSTC_RCAUSE) Brown Out CORE Detector Reset */
-#define RSTC_RCAUSE_BODCORE         (0x1u << RSTC_RCAUSE_BODCORE_Pos)
+#define RSTC_RCAUSE_BODCORE         (_U_(0x1) << RSTC_RCAUSE_BODCORE_Pos)
 #define RSTC_RCAUSE_BODVDD_Pos      2            /**< \brief (RSTC_RCAUSE) Brown Out VDD Detector Reset */
-#define RSTC_RCAUSE_BODVDD          (0x1u << RSTC_RCAUSE_BODVDD_Pos)
+#define RSTC_RCAUSE_BODVDD          (_U_(0x1) << RSTC_RCAUSE_BODVDD_Pos)
 #define RSTC_RCAUSE_EXT_Pos         4            /**< \brief (RSTC_RCAUSE) External Reset */
-#define RSTC_RCAUSE_EXT             (0x1u << RSTC_RCAUSE_EXT_Pos)
+#define RSTC_RCAUSE_EXT             (_U_(0x1) << RSTC_RCAUSE_EXT_Pos)
 #define RSTC_RCAUSE_WDT_Pos         5            /**< \brief (RSTC_RCAUSE) Watchdog Reset */
-#define RSTC_RCAUSE_WDT             (0x1u << RSTC_RCAUSE_WDT_Pos)
+#define RSTC_RCAUSE_WDT             (_U_(0x1) << RSTC_RCAUSE_WDT_Pos)
 #define RSTC_RCAUSE_SYST_Pos        6            /**< \brief (RSTC_RCAUSE) System Reset Request */
-#define RSTC_RCAUSE_SYST            (0x1u << RSTC_RCAUSE_SYST_Pos)
+#define RSTC_RCAUSE_SYST            (_U_(0x1) << RSTC_RCAUSE_SYST_Pos)
 #define RSTC_RCAUSE_BACKUP_Pos      7            /**< \brief (RSTC_RCAUSE) Backup Reset */
-#define RSTC_RCAUSE_BACKUP          (0x1u << RSTC_RCAUSE_BACKUP_Pos)
-#define RSTC_RCAUSE_MASK            0xF7u        /**< \brief (RSTC_RCAUSE) MASK Register */
+#define RSTC_RCAUSE_BACKUP          (_U_(0x1) << RSTC_RCAUSE_BACKUP_Pos)
+#define RSTC_RCAUSE_MASK            _U_(0xF7)    /**< \brief (RSTC_RCAUSE) MASK Register */
 
 /* -------- RSTC_BKUPEXIT : (RSTC Offset: 0x02) (R/   8) Backup Exit Source -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -92,15 +88,15 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RSTC_BKUPEXIT_OFFSET        0x02         /**< \brief (RSTC_BKUPEXIT offset) Backup Exit Source */
-#define RSTC_BKUPEXIT_RESETVALUE    0x00u        /**< \brief (RSTC_BKUPEXIT reset_value) Backup Exit Source */
+#define RSTC_BKUPEXIT_RESETVALUE    _U_(0x00)    /**< \brief (RSTC_BKUPEXIT reset_value) Backup Exit Source */
 
 #define RSTC_BKUPEXIT_EXTWAKE_Pos   0            /**< \brief (RSTC_BKUPEXIT) External Wakeup */
-#define RSTC_BKUPEXIT_EXTWAKE       (0x1u << RSTC_BKUPEXIT_EXTWAKE_Pos)
+#define RSTC_BKUPEXIT_EXTWAKE       (_U_(0x1) << RSTC_BKUPEXIT_EXTWAKE_Pos)
 #define RSTC_BKUPEXIT_RTC_Pos       1            /**< \brief (RSTC_BKUPEXIT) Real Timer Counter Interrupt */
-#define RSTC_BKUPEXIT_RTC           (0x1u << RSTC_BKUPEXIT_RTC_Pos)
+#define RSTC_BKUPEXIT_RTC           (_U_(0x1) << RSTC_BKUPEXIT_RTC_Pos)
 #define RSTC_BKUPEXIT_BBPS_Pos      2            /**< \brief (RSTC_BKUPEXIT) Battery Backup Power Switch */
-#define RSTC_BKUPEXIT_BBPS          (0x1u << RSTC_BKUPEXIT_BBPS_Pos)
-#define RSTC_BKUPEXIT_MASK          0x07u        /**< \brief (RSTC_BKUPEXIT) MASK Register */
+#define RSTC_BKUPEXIT_BBPS          (_U_(0x1) << RSTC_BKUPEXIT_BBPS_Pos)
+#define RSTC_BKUPEXIT_MASK          _U_(0x07)    /**< \brief (RSTC_BKUPEXIT) MASK Register */
 
 /** \brief RSTC hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))

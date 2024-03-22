@@ -3,29 +3,25 @@
  *
  * \brief Component description for CCL
  *
- * Copyright (c) 2016-2018 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2018 Microchip Technology Inc.
  *
  * \asf_license_start
  *
  * \page License
  *
- * Subject to your compliance with these terms, you may use Microchip
- * software and any derivatives exclusively with Microchip products.
- * It is your responsibility to comply with third party license terms applicable
- * to your use of third party software (including open source software) that
- * may accompany Microchip software.
+ * SPDX-License-Identifier: Apache-2.0
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES,
- * WHETHER EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE,
- * INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY,
- * AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT WILL MICROCHIP BE
- * LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE
- * SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS BEEN ADVISED OF THE
- * POSSIBILITY OR THE DAMAGES ARE FORESEEABLE.  TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY
- * RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
- * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may
+ * not use this file except in compliance with the License.
+ * You may obtain a copy of the Licence at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an AS IS BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  * \asf_license_stop
  *
@@ -58,15 +54,15 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CCL_CTRL_OFFSET             0x0          /**< \brief (CCL_CTRL offset) Control */
-#define CCL_CTRL_RESETVALUE         0x00u        /**< \brief (CCL_CTRL reset_value) Control */
+#define CCL_CTRL_RESETVALUE         _U_(0x00)    /**< \brief (CCL_CTRL reset_value) Control */
 
 #define CCL_CTRL_SWRST_Pos          0            /**< \brief (CCL_CTRL) Software Reset */
-#define CCL_CTRL_SWRST              (0x1u << CCL_CTRL_SWRST_Pos)
+#define CCL_CTRL_SWRST              (_U_(0x1) << CCL_CTRL_SWRST_Pos)
 #define CCL_CTRL_ENABLE_Pos         1            /**< \brief (CCL_CTRL) Enable */
-#define CCL_CTRL_ENABLE             (0x1u << CCL_CTRL_ENABLE_Pos)
+#define CCL_CTRL_ENABLE             (_U_(0x1) << CCL_CTRL_ENABLE_Pos)
 #define CCL_CTRL_RUNSTDBY_Pos       6            /**< \brief (CCL_CTRL) Run during Standby */
-#define CCL_CTRL_RUNSTDBY           (0x1u << CCL_CTRL_RUNSTDBY_Pos)
-#define CCL_CTRL_MASK               0x43u        /**< \brief (CCL_CTRL) MASK Register */
+#define CCL_CTRL_RUNSTDBY           (_U_(0x1) << CCL_CTRL_RUNSTDBY_Pos)
+#define CCL_CTRL_MASK               _U_(0x43)    /**< \brief (CCL_CTRL) MASK Register */
 
 /* -------- CCL_SEQCTRL : (CCL Offset: 0x4) (R/W  8) SEQ Control x -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -80,22 +76,22 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CCL_SEQCTRL_OFFSET          0x4          /**< \brief (CCL_SEQCTRL offset) SEQ Control x */
-#define CCL_SEQCTRL_RESETVALUE      0x00u        /**< \brief (CCL_SEQCTRL reset_value) SEQ Control x */
+#define CCL_SEQCTRL_RESETVALUE      _U_(0x00)    /**< \brief (CCL_SEQCTRL reset_value) SEQ Control x */
 
 #define CCL_SEQCTRL_SEQSEL_Pos      0            /**< \brief (CCL_SEQCTRL) Sequential Selection */
-#define CCL_SEQCTRL_SEQSEL_Msk      (0xFu << CCL_SEQCTRL_SEQSEL_Pos)
+#define CCL_SEQCTRL_SEQSEL_Msk      (_U_(0xF) << CCL_SEQCTRL_SEQSEL_Pos)
 #define CCL_SEQCTRL_SEQSEL(value)   (CCL_SEQCTRL_SEQSEL_Msk & ((value) << CCL_SEQCTRL_SEQSEL_Pos))
-#define   CCL_SEQCTRL_SEQSEL_DISABLE_Val  0x0u   /**< \brief (CCL_SEQCTRL) Sequential logic is disabled */
-#define   CCL_SEQCTRL_SEQSEL_DFF_Val      0x1u   /**< \brief (CCL_SEQCTRL) D flip flop */
-#define   CCL_SEQCTRL_SEQSEL_JK_Val       0x2u   /**< \brief (CCL_SEQCTRL) JK flip flop */
-#define   CCL_SEQCTRL_SEQSEL_LATCH_Val    0x3u   /**< \brief (CCL_SEQCTRL) D latch */
-#define   CCL_SEQCTRL_SEQSEL_RS_Val       0x4u   /**< \brief (CCL_SEQCTRL) RS latch */
+#define   CCL_SEQCTRL_SEQSEL_DISABLE_Val  _U_(0x0)   /**< \brief (CCL_SEQCTRL) Sequential logic is disabled */
+#define   CCL_SEQCTRL_SEQSEL_DFF_Val      _U_(0x1)   /**< \brief (CCL_SEQCTRL) D flip flop */
+#define   CCL_SEQCTRL_SEQSEL_JK_Val       _U_(0x2)   /**< \brief (CCL_SEQCTRL) JK flip flop */
+#define   CCL_SEQCTRL_SEQSEL_LATCH_Val    _U_(0x3)   /**< \brief (CCL_SEQCTRL) D latch */
+#define   CCL_SEQCTRL_SEQSEL_RS_Val       _U_(0x4)   /**< \brief (CCL_SEQCTRL) RS latch */
 #define CCL_SEQCTRL_SEQSEL_DISABLE  (CCL_SEQCTRL_SEQSEL_DISABLE_Val << CCL_SEQCTRL_SEQSEL_Pos)
 #define CCL_SEQCTRL_SEQSEL_DFF      (CCL_SEQCTRL_SEQSEL_DFF_Val    << CCL_SEQCTRL_SEQSEL_Pos)
 #define CCL_SEQCTRL_SEQSEL_JK       (CCL_SEQCTRL_SEQSEL_JK_Val     << CCL_SEQCTRL_SEQSEL_Pos)
 #define CCL_SEQCTRL_SEQSEL_LATCH    (CCL_SEQCTRL_SEQSEL_LATCH_Val  << CCL_SEQCTRL_SEQSEL_Pos)
 #define CCL_SEQCTRL_SEQSEL_RS       (CCL_SEQCTRL_SEQSEL_RS_Val     << CCL_SEQCTRL_SEQSEL_Pos)
-#define CCL_SEQCTRL_MASK            0x0Fu        /**< \brief (CCL_SEQCTRL) MASK Register */
+#define CCL_SEQCTRL_MASK            _U_(0x0F)    /**< \brief (CCL_SEQCTRL) MASK Register */
 
 /* -------- CCL_LUTCTRL : (CCL Offset: 0x8) (R/W 32) LUT Control x -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -121,34 +117,34 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CCL_LUTCTRL_OFFSET          0x8          /**< \brief (CCL_LUTCTRL offset) LUT Control x */
-#define CCL_LUTCTRL_RESETVALUE      0x00000000u  /**< \brief (CCL_LUTCTRL reset_value) LUT Control x */
+#define CCL_LUTCTRL_RESETVALUE      _U_(0x00000000) /**< \brief (CCL_LUTCTRL reset_value) LUT Control x */
 
 #define CCL_LUTCTRL_ENABLE_Pos      1            /**< \brief (CCL_LUTCTRL) LUT Enable */
-#define CCL_LUTCTRL_ENABLE          (0x1u << CCL_LUTCTRL_ENABLE_Pos)
+#define CCL_LUTCTRL_ENABLE          (_U_(0x1) << CCL_LUTCTRL_ENABLE_Pos)
 #define CCL_LUTCTRL_FILTSEL_Pos     4            /**< \brief (CCL_LUTCTRL) Filter Selection */
-#define CCL_LUTCTRL_FILTSEL_Msk     (0x3u << CCL_LUTCTRL_FILTSEL_Pos)
+#define CCL_LUTCTRL_FILTSEL_Msk     (_U_(0x3) << CCL_LUTCTRL_FILTSEL_Pos)
 #define CCL_LUTCTRL_FILTSEL(value)  (CCL_LUTCTRL_FILTSEL_Msk & ((value) << CCL_LUTCTRL_FILTSEL_Pos))
-#define   CCL_LUTCTRL_FILTSEL_DISABLE_Val 0x0u   /**< \brief (CCL_LUTCTRL) Filter disabled */
-#define   CCL_LUTCTRL_FILTSEL_SYNCH_Val   0x1u   /**< \brief (CCL_LUTCTRL) Synchronizer enabled */
-#define   CCL_LUTCTRL_FILTSEL_FILTER_Val  0x2u   /**< \brief (CCL_LUTCTRL) Filter enabled */
+#define   CCL_LUTCTRL_FILTSEL_DISABLE_Val _U_(0x0)   /**< \brief (CCL_LUTCTRL) Filter disabled */
+#define   CCL_LUTCTRL_FILTSEL_SYNCH_Val   _U_(0x1)   /**< \brief (CCL_LUTCTRL) Synchronizer enabled */
+#define   CCL_LUTCTRL_FILTSEL_FILTER_Val  _U_(0x2)   /**< \brief (CCL_LUTCTRL) Filter enabled */
 #define CCL_LUTCTRL_FILTSEL_DISABLE (CCL_LUTCTRL_FILTSEL_DISABLE_Val << CCL_LUTCTRL_FILTSEL_Pos)
 #define CCL_LUTCTRL_FILTSEL_SYNCH   (CCL_LUTCTRL_FILTSEL_SYNCH_Val << CCL_LUTCTRL_FILTSEL_Pos)
 #define CCL_LUTCTRL_FILTSEL_FILTER  (CCL_LUTCTRL_FILTSEL_FILTER_Val << CCL_LUTCTRL_FILTSEL_Pos)
 #define CCL_LUTCTRL_EDGESEL_Pos     7            /**< \brief (CCL_LUTCTRL) Edge Selection */
-#define CCL_LUTCTRL_EDGESEL         (0x1u << CCL_LUTCTRL_EDGESEL_Pos)
+#define CCL_LUTCTRL_EDGESEL         (_U_(0x1) << CCL_LUTCTRL_EDGESEL_Pos)
 #define CCL_LUTCTRL_INSEL0_Pos      8            /**< \brief (CCL_LUTCTRL) Input Selection 0 */
-#define CCL_LUTCTRL_INSEL0_Msk      (0xFu << CCL_LUTCTRL_INSEL0_Pos)
+#define CCL_LUTCTRL_INSEL0_Msk      (_U_(0xF) << CCL_LUTCTRL_INSEL0_Pos)
 #define CCL_LUTCTRL_INSEL0(value)   (CCL_LUTCTRL_INSEL0_Msk & ((value) << CCL_LUTCTRL_INSEL0_Pos))
-#define   CCL_LUTCTRL_INSEL0_MASK_Val     0x0u   /**< \brief (CCL_LUTCTRL) Masked input */
-#define   CCL_LUTCTRL_INSEL0_FEEDBACK_Val 0x1u   /**< \brief (CCL_LUTCTRL) Feedback input source */
-#define   CCL_LUTCTRL_INSEL0_LINK_Val     0x2u   /**< \brief (CCL_LUTCTRL) Linked LUT input source */
-#define   CCL_LUTCTRL_INSEL0_EVENT_Val    0x3u   /**< \brief (CCL_LUTCTRL) Event in put source */
-#define   CCL_LUTCTRL_INSEL0_IO_Val       0x4u   /**< \brief (CCL_LUTCTRL) I/O pin input source */
-#define   CCL_LUTCTRL_INSEL0_AC_Val       0x5u   /**< \brief (CCL_LUTCTRL) AC input source */
-#define   CCL_LUTCTRL_INSEL0_TC_Val       0x6u   /**< \brief (CCL_LUTCTRL) TC input source */
-#define   CCL_LUTCTRL_INSEL0_ALTTC_Val    0x7u   /**< \brief (CCL_LUTCTRL) Alternate TC input source */
-#define   CCL_LUTCTRL_INSEL0_TCC_Val      0x8u   /**< \brief (CCL_LUTCTRL) TCC input source */
-#define   CCL_LUTCTRL_INSEL0_SERCOM_Val   0x9u   /**< \brief (CCL_LUTCTRL) SERCOM inout source */
+#define   CCL_LUTCTRL_INSEL0_MASK_Val     _U_(0x0)   /**< \brief (CCL_LUTCTRL) Masked input */
+#define   CCL_LUTCTRL_INSEL0_FEEDBACK_Val _U_(0x1)   /**< \brief (CCL_LUTCTRL) Feedback input source */
+#define   CCL_LUTCTRL_INSEL0_LINK_Val     _U_(0x2)   /**< \brief (CCL_LUTCTRL) Linked LUT input source */
+#define   CCL_LUTCTRL_INSEL0_EVENT_Val    _U_(0x3)   /**< \brief (CCL_LUTCTRL) Event in put source */
+#define   CCL_LUTCTRL_INSEL0_IO_Val       _U_(0x4)   /**< \brief (CCL_LUTCTRL) I/O pin input source */
+#define   CCL_LUTCTRL_INSEL0_AC_Val       _U_(0x5)   /**< \brief (CCL_LUTCTRL) AC input source */
+#define   CCL_LUTCTRL_INSEL0_TC_Val       _U_(0x6)   /**< \brief (CCL_LUTCTRL) TC input source */
+#define   CCL_LUTCTRL_INSEL0_ALTTC_Val    _U_(0x7)   /**< \brief (CCL_LUTCTRL) Alternate TC input source */
+#define   CCL_LUTCTRL_INSEL0_TCC_Val      _U_(0x8)   /**< \brief (CCL_LUTCTRL) TCC input source */
+#define   CCL_LUTCTRL_INSEL0_SERCOM_Val   _U_(0x9)   /**< \brief (CCL_LUTCTRL) SERCOM inout source */
 #define CCL_LUTCTRL_INSEL0_MASK     (CCL_LUTCTRL_INSEL0_MASK_Val   << CCL_LUTCTRL_INSEL0_Pos)
 #define CCL_LUTCTRL_INSEL0_FEEDBACK (CCL_LUTCTRL_INSEL0_FEEDBACK_Val << CCL_LUTCTRL_INSEL0_Pos)
 #define CCL_LUTCTRL_INSEL0_LINK     (CCL_LUTCTRL_INSEL0_LINK_Val   << CCL_LUTCTRL_INSEL0_Pos)
@@ -160,21 +156,21 @@ typedef union {
 #define CCL_LUTCTRL_INSEL0_TCC      (CCL_LUTCTRL_INSEL0_TCC_Val    << CCL_LUTCTRL_INSEL0_Pos)
 #define CCL_LUTCTRL_INSEL0_SERCOM   (CCL_LUTCTRL_INSEL0_SERCOM_Val << CCL_LUTCTRL_INSEL0_Pos)
 #define CCL_LUTCTRL_INSEL1_Pos      12           /**< \brief (CCL_LUTCTRL) Input Selection 1 */
-#define CCL_LUTCTRL_INSEL1_Msk      (0xFu << CCL_LUTCTRL_INSEL1_Pos)
+#define CCL_LUTCTRL_INSEL1_Msk      (_U_(0xF) << CCL_LUTCTRL_INSEL1_Pos)
 #define CCL_LUTCTRL_INSEL1(value)   (CCL_LUTCTRL_INSEL1_Msk & ((value) << CCL_LUTCTRL_INSEL1_Pos))
 #define CCL_LUTCTRL_INSEL2_Pos      16           /**< \brief (CCL_LUTCTRL) Input Selection 2 */
-#define CCL_LUTCTRL_INSEL2_Msk      (0xFu << CCL_LUTCTRL_INSEL2_Pos)
+#define CCL_LUTCTRL_INSEL2_Msk      (_U_(0xF) << CCL_LUTCTRL_INSEL2_Pos)
 #define CCL_LUTCTRL_INSEL2(value)   (CCL_LUTCTRL_INSEL2_Msk & ((value) << CCL_LUTCTRL_INSEL2_Pos))
 #define CCL_LUTCTRL_INVEI_Pos       20           /**< \brief (CCL_LUTCTRL) Input Event Invert */
-#define CCL_LUTCTRL_INVEI           (0x1u << CCL_LUTCTRL_INVEI_Pos)
+#define CCL_LUTCTRL_INVEI           (_U_(0x1) << CCL_LUTCTRL_INVEI_Pos)
 #define CCL_LUTCTRL_LUTEI_Pos       21           /**< \brief (CCL_LUTCTRL) Event Input Enable */
-#define CCL_LUTCTRL_LUTEI           (0x1u << CCL_LUTCTRL_LUTEI_Pos)
+#define CCL_LUTCTRL_LUTEI           (_U_(0x1) << CCL_LUTCTRL_LUTEI_Pos)
 #define CCL_LUTCTRL_LUTEO_Pos       22           /**< \brief (CCL_LUTCTRL) Event Output Enable */
-#define CCL_LUTCTRL_LUTEO           (0x1u << CCL_LUTCTRL_LUTEO_Pos)
+#define CCL_LUTCTRL_LUTEO           (_U_(0x1) << CCL_LUTCTRL_LUTEO_Pos)
 #define CCL_LUTCTRL_TRUTH_Pos       24           /**< \brief (CCL_LUTCTRL) Truth Value */
-#define CCL_LUTCTRL_TRUTH_Msk       (0xFFu << CCL_LUTCTRL_TRUTH_Pos)
+#define CCL_LUTCTRL_TRUTH_Msk       (_U_(0xFF) << CCL_LUTCTRL_TRUTH_Pos)
 #define CCL_LUTCTRL_TRUTH(value)    (CCL_LUTCTRL_TRUTH_Msk & ((value) << CCL_LUTCTRL_TRUTH_Pos))
-#define CCL_LUTCTRL_MASK            0xFF7FFFB2u  /**< \brief (CCL_LUTCTRL) MASK Register */
+#define CCL_LUTCTRL_MASK            _U_(0xFF7FFFB2) /**< \brief (CCL_LUTCTRL) MASK Register */
 
 /** \brief CCL hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))

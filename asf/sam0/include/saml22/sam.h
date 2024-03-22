@@ -1,39 +1,34 @@
 /**
  * \file
  *
- * \brief Top header file for SAML22
+ * \brief Top level header file
  *
  * Copyright (c) 2018 Microchip Technology Inc.
  *
- * \asf_license_start
+ * \license_start
  *
  * \page License
  *
  * SPDX-License-Identifier: Apache-2.0
  *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may
- * not use this file except in compliance with the License.
- * You may obtain a copy of the Licence at
- * 
- * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
  * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an AS IS BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * \asf_license_stop
+ * \license_stop
  *
  */
 
-#ifndef _SAML22_
-#define _SAML22_
-
-/**
- * \defgroup SAML22_definitions SAML22 Device Definitions
- * \brief SAML22 CMSIS Definitions.
- */
+#ifndef _SAM_
+#define _SAM_
 
 #if   defined(__SAML22G16A__) || defined(__ATSAML22G16A__)
   #include "saml22g16a.h"
@@ -54,7 +49,8 @@
 #elif defined(__SAML22N18A__) || defined(__ATSAML22N18A__)
   #include "saml22n18a.h"
 #else
-  #error Library does not support the specified device.
+  #error Library does not support the specified device
 #endif
 
-#endif /* _SAML22_ */
+#endif /* _SAM_ */
+
