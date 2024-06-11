@@ -219,7 +219,7 @@ void TRNG_Handler                ( void );
  */
 
 #define __CM0PLUS_REV          1         /*!< Core revision r0p1 */
-#define __MPU_PRESENT          0         /*!< MPU present or not */
+#define __MPU_PRESENT          1         /*!< MPU present or not */
 #define __NVIC_PRIO_BITS       2         /*!< Number of bits used for Priority Levels */
 #define __VTOR_PRESENT         1         /*!< VTOR present or not */
 #define __Vendor_SysTickConfig 0         /*!< Set to 1 if different SysTick Config is used */
